@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0c1020">
+  <title>MERGE LAB</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <header id="bar"><button id="back" class="ic" aria-label="Back to menu" hidden>&#8249;</button>
+    <h1 id="ttl">Merge Lab</h1>
+    <div id="cn" title="Coins"><i></i><b id="coins">0</b></div>
+  </header>
+  <main>
+    <section id="home" class="scr">
+      <div class="hero" aria-hidden="true">
+        <div class="ht a">2</div>
+        <div class="ht b">2</div>
+        <div class="ht c">4</div>
+      </div>
+      <h2 class="big">Merge Lab</h2>
+      <p class="sub">Slide, match, and double. Easy to learn, hard to put down.</p>
+      <div class="menu">
+        <button class="mode" data-go="classic"><b>Classic</b><span id="hc"></span></button>
+        <button class="mode" data-go="daily"><b>Daily Challenge</b><span id="hd"></span></button>
+        <button class="mode" data-go="ta"><b>Time Attack</b><span id="ht"></span></button>
+      </div>
+      <div class="row4"><button class="btn s" data-scr="stats">Stats</button><button class="btn s"
+          data-scr="ach">Achievements</button><button class="btn s" data-scr="shop">Shop</button><button class="btn s"
+          data-scr="set">Settings</button></div>
+      <div class="card">
+        <h3>Today's missions</h3>
+        <div id="ml"></div>
+      </div>
+    </section>
+    <section id="game" class="scr" hidden>
+      <div class="hud">
+        <div class="box"><span>Score</span><b id="sc">0</b></div>
+        <div class="box"><span>Best</span><b id="bs">0</b></div>
+        <div class="box"><span id="l3">Top tile</span><b id="v3">2</b></div>
+      </div>
+      <div class="bwrap">
+        <div id="board" class="b" tabindex="0" aria-label="Game board. Use arrow keys, WASD or swipe.">
+          <div class="cells"></div>
+          <div id="tiles" class="tiles"></div>
+        </div>
+        <div id="ov" class="ov" hidden></div>
+      </div>
+      <div class="ctl"><button id="undo" class="btn s">Undo <em id="uc">3</em></button><button id="rs"
+          class="btn s">Restart</button><button id="fin" class="btn s">Finish</button></div>
+      <p class="hint" id="hint">Swipe, or use arrow keys / WASD. Press U to undo.</p>
+    </section>
+    <section id="daily" class="scr" hidden></section>
+    <section id="ta" class="scr" hidden></section>
+    <section id="stats" class="scr" hidden></section>
+    <section id="ach" class="scr" hidden></section>
+    <section id="shop" class="scr" hidden></section>
+    <section id="set" class="scr" hidden></section>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="js/engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
